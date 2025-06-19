@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yandong Zhang | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .blog-card { transition: all 0.3s ease; }
+        .blog-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .fade-in { animation: fadeIn 1s ease-in; }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 flex justify-between">
+            <a href="#" class="flex items-center py-4 px-2"><span class="font-semibold text-gray-900 text-2xl">Yandong<span class="text-blue-600">Zhang</span></span></a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#about" class="py-4 px-2 text-gray-700 hover:text-blue-600">About</a>
+                <a href="#experience" class="py-4 px-2 text-gray-700 hover:text-blue-600">Experience</a>
+                <a href="#gallery" class="py-4 px-2 text-gray-700 hover:text-blue-600">Gallery</a>
+                <a href="#contact" class="py-4 px-2 text-gray-700 hover:text-blue-600">Contact</a>
+            </div>
+            <button class="mobile-menu-button md:hidden outline-none py-4 px-2"><i class="fas fa-bars text-gray-700"></i></button>
+        </div>
+        <div class="mobile-menu hidden bg-white">
+            <ul>
+                <li><a href="#about" class="block px-4 py-2 text-sm text-gray-700">About</a></li>
+                <li><a href="#experience" class="block px-4 py-2 text-sm text-gray-700">Experience</a></li>
+                <li><a href="#gallery" class="block px-4 py-2 text-sm text-gray-700">Gallery</a></li>
+                <li><a href="#contact" class="block px-4 py-2 text-sm text-gray-700">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-20">
+        <div class="container mx-auto px-6 text-center fade-in">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Hi, I'm <span class="text-yellow-300">Yandong Zhang</span></h1>
+            <p class="text-xl md:text-2xl mb-8">M.S. Candidate in Business Analytics and Risk Management<br>Johns Hopkins University</p>
+            <a href="#contact" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100">Contact Me</a>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">About Me</h2>
+            <div class="md:flex items-center">
+                <img src="images/YandongZ_UCDavis.jpg" alt="Yandong at UC Davis" class="rounded-full w-48 h-48 mb-6 md:mb-0 md:mr-12">
+                <div class="flex flex-col items-center md:items-start">
+                    <div class="flex space-x-4 mb-4">
+                        <a href="https://www.instagram.com/scalex30/" target="_blank" rel="noopener" class="text-pink-500 hover:text-pink-700 text-2xl"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/yandong-Alex-zhang/" target="_blank" rel="noopener" class="text-blue-700 hover:text-blue-900 text-2xl"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">
+                        I'm a data analyst and aspiring business analyst pursuing my M.S. in Business Analytics and Risk Management at Johns Hopkins University (expected July 2025). I specialize in supply chain optimization, predictive modeling, and data visualization, aiming to turn complex data into actionable insights.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">Experience</h2>
+            <div class="space-y-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold">Yonghang Shipping</h3>
+                    <p class="text-blue-500">Data Analyst &bull; Zhejiang, China &bull; Jun 2023 – Sep 2023</p>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>Optimized supply chain efficiency by analyzing shipment data trends, reducing potential delays by 15%.</li>
+                        <li>Cleaned and restructured salary and expense datasets using MySQL, improving finance team's data retrieval efficiency by 40%.</li>
+                        <li>Developed a predictive model using Random Forest Regressor to forecast monthly spending, resulting in more efficient budget allocation and reduced over-expenditures.</li>
+                        <li>Designed an interactive Tableau dashboard to visualize spending trends, enabling executives to identify cost-saving opportunities and improve decision-making.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold">Littlefield Supply Chain Simulation</h3>
+                    <p class="text-blue-500">Johns Hopkins University &bull; Feb 2025 – Mar 2025</p>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>Designed dynamic reorder policies and safety stock levels, boosting service level to 98%.</li>
+                        <li>Analyzed lead time variability and capacity constraints, reducing stockouts by 85%.</li>
+                        <li>Tuned production schedule and machine allocation to maximize throughput under budget limits.</li>
+                        <li>Secured 1st place overall by achieving optimal balance between cost, inventory, and service KPIs.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold">The Purdue University Data4Good Case Competition 2024</h3>
+                    <p class="text-blue-500">6th Place Overall, 3rd in Eastern Division &bull; Sep 2024 – Nov 2024</p>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>Addressed the challenge of automating grief journey mapping by implementing and optimizing Random Forest and XGBoost models, achieving high classification accuracy with F1-Score of 0.941.</li>
+                        <li>Fine-tuned the Llama 3.2 (3B) model with customized prompts to better capture nuanced grief-related emotions, significantly improving text-based classification of survey responses.</li>
+                        <li>Led collaboration across a 4-member team, designing an aggregation framework combining traditional models and LLMs, which contributed to the final leaderboard success.</li>
+                        <li>Achieved a score of 945/1000, demonstrating expertise in foundational AI concepts, including the development of AI solutions using Microsoft Azure services.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold">Kaggle Competition CIBMTR: Equity in post-HCT Survival Predictions</h3>
+                    <p class="text-blue-500">Top 10.6% (Rank 352 / 3,325 Teams) &bull; Dec 2024 – Mar 2025</p>
+                    <ul class="list-disc list-inside text-gray-600">
+                        <li>Performed extensive EDA and correlation analysis to guide feature selection, combining heatmaps and model-driven importance scores to refine inputs from complex synthetic healthcare data.</li>
+                        <li>Built a stacked ensemble integrating a hyperparameter-tuned neural network with XGBoost, CatBoost, and LightGBM models to effectively capture non-linear patterns in survival prediction.</li>
+                        <li>Designed a robust ensemble strategy by blending personal model outputs with top-performing public notebooks, enhancing leaderboard stability and final performance.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">Gallery</h2>
+            <p class="text-center text-gray-600 mb-12">I'll be updating this page regularly with my photographs. No descriptions for most—just enjoy the view!</p>
+            <div class="columns-1 sm:columns-2 lg:columns-3 gap-4">
+                <img src="images/GoldenGate.jpg" alt="Golden Gate Bridge" class="mb-4 w-full rounded-lg shadow-lg break-inside-avoid">
+                <img src="images/Lake_Tahoe.jpg" alt="Lake Tahoe" class="mb-4 w-full rounded-lg shadow-lg break-inside-avoid">
+                <img src="images/5021693122734_.pic.jpg" alt="Photo" class="mb-4 w-full rounded-lg shadow-lg break-inside-avoid">
+                <img src="images/4991693122700_.pic.jpg" alt="Photo" class="mb-4 w-full rounded-lg shadow-lg break-inside-avoid">
+                <img src="images/4981693122694_.pic.jpg" alt="Photo" class="mb-4 w-full rounded-lg shadow-lg break-inside-avoid">
+                <img src="images/4861692949188_.pic.jpg" alt="Photo" class="mb-4 w-full rounded-lg shadow-lg break-inside-avoid">
+                <img src="images/4881692949353_.pic.jpg" alt="Photo" class="mb-4 w-full rounded-lg shadow-lg break-inside-avoid">
+                <img src="images/4891692949372_.pic.jpg" alt="Photo" class="mb-4 w-full rounded-lg shadow-lg break-inside-avoid">
+                <img src="images/4901692949377_.pic.jpg" alt="Photo" class="mb-4 w-full rounded-lg shadow-lg break-inside-avoid">
+                <img src="images/4971693122691_.pic.jpg" alt="Photo" class="mb-4 w-full rounded-lg shadow-lg break-inside-avoid">
+                <img src="images/5001693122715_.pic.jpg" alt="Photo" class="mb-4 w-full rounded-lg shadow-lg break-inside-avoid">
+                <img src="images/5011693122724_.pic.jpg" alt="Photo" class="mb-4 w-full rounded-lg shadow-lg break-inside-avoid">
+                <img src="images/alex_by_the_sea.jpg" alt="Photo" class="mb-4 w-full rounded-lg shadow-lg break-inside-avoid">
+                <img src="images/66d537ea5bdea2650881a78c53d9b74.jpg" alt="Photo" class="mb-4 w-full rounded-lg shadow-lg break-inside-avoid">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 md:flex md:space-x-12">
+            <div class="md:w-1/2">
+                <h3 class="text-2xl font-bold mb-4">Contact</h3>
+                <p class="mb-4">Feel free to reach out for new opportunities or collaborations.</p>
+                <p><i class="fas fa-envelope mr-2"></i> yandongz0105@gmail.com</p>
+                <p><i class="fas fa-phone-alt mr-2"></i> (530) 219-5648</p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="https://www.instagram.com/scalex30/" target="_blank" rel="noopener" class="text-pink-500 hover:text-pink-700 text-2xl"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/yandong-Alex-zhang/" target="_blank" rel="noopener" class="text-blue-700 hover:text-blue-900 text-2xl"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <form class="bg-white p-6 rounded-lg shadow-md md:w-1/2">
+                <input class="w-full mb-4 px-4 py-2 border rounded" type="text" placeholder="Your Name">
+                <input class="w-full mb-4 px-4 py-2 border rounded" type="email" placeholder="Your Email">
+                <textarea class="w-full mb-4 px-4 py-2 border rounded" rows="4" placeholder="Message"></textarea>
+                <button class="bg-blue-500 text-white px-6 py-2 rounded">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-6 text-center">
+        © 2025 Yandong Zhang. All rights reserved.
+    </footer>
+
+    <script>
+        document.querySelector('.mobile-menu-button').addEventListener('click', () => {
+            document.querySelector('.mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
