@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Content Analysis Report</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #0077B5; /* A professional blue */
+            --background-color: #f4f7f9;
+            --card-background: #ffffff;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --border-color: #e9ecef;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: var(--background-color);
+        }
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 40px;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+        .section {
+            background-color: var(--card-background);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .section h2 {
+             color: var(--primary-blue);
+             border-bottom: 1px solid var(--border-color);
+             padding-bottom: 15px;
+             margin-top: 0;
+             font-size: 1.8em;
+             font-weight: 500;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 25px auto;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: box-shadow 0.3s ease;
+        }
+        img:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        p {
+            font-size: 1.1em;
+            color: var(--text-light);
+        }
+        strong {
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+            color: var(--text-light);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: #aaa;
+            font-size: 0.9em;
+        }
+        a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Netflix Content Analysis Report</h1>
+    </header>
+
+    <main>
+        <div class="section">
+            <h2>Executive Summary</h2>
+            <p>This report provides a comprehensive analysis of Netflix's content library, focusing on content type distribution, genre popularity, release trends, and global distribution. The findings support data-driven strategies for content acquisition and market expansion.</p>
+        </div>
+
+        <div class="section">
+            <h2>About the Dataset</h2>
+            <p>This analysis is based on the "Netflix Movies and TV Shows" dataset, <a href="https://www.kaggle.com/datasets/shivamb/netflix-shows/data" target="_blank">publicly available on Kaggle</a>. The dataset contains over 8,000 listings as of mid-2021 and includes key details for each title, such as cast, directors, ratings, release year, and duration. It provides a comprehensive snapshot of the content available on one of the world's most popular streaming platforms.</p>
+        </div>
+
+        <div class="section">
+            <h2>1. Content Type Distribution</h2>
+            <p><strong>Findings:</strong> The library consists of both Movies and TV Shows. TV Shows have seen a steady increase, indicating a growing user preference for serialized content.</p>
+            <p><strong>Business Implication:</strong> Continue investing in high-quality TV series to maintain user engagement and subscription retention, while maintaining a strong movie catalog.</p>
+            <img src="plots/content_type_distribution.png" alt="Content Type Distribution Chart">
+        </div>
+
+        <div class="section">
+            <h2>2. Top 10 Most Popular Genres</h2>
+            <p><strong>Findings:</strong> Dramas, International TV Shows, and Comedies are the most popular genres available on the platform.</p>
+            <p><strong>Business Implication:</strong> Content acquisition should prioritize these popular genres. Investing in diverse niche genres can also attract a broader audience.</p>
+            <img src="plots/top_10_genres_on_netflix.png" alt="Top 10 Genres Chart">
+        </div>
+        
+        <div class="section">
+            <h2>3. Content Added Over The Years</h2>
+            <p><strong>Findings:</strong> There has been a significant increase in the number of titles added each year, peaking in recent years, indicating rapid library expansion.</p>
+            <p><strong>Business Implication:</strong> Maintain a consistent release schedule, with strategic peaks during high-traffic months (e.g., holidays), to keep the catalog fresh and engaging.</p>
+            <img src="plots/number_of_titles_added_by_year.png" alt="Titles Added by Year Chart">
+        </div>
+
+        <div class="section">
+            <h2>4. Global Content Distribution</h2>
+            <p><strong>Findings:</strong> The United States, India, and the United Kingdom are the top content-producing countries. The world map visualization highlights both strongholds and areas for potential growth.</p>
+            <p><strong>Business Implication:</strong> Continue investing in local content in key markets and explore expansion opportunities in underrepresented regions with localized content.</p>
+            <img src="plots/number_of_netflix_contents_by_countries.png" alt="Global Content Distribution Map">
+        </div>
+
+        <div class="section">
+            <h2>5. Content Distribution: Top Countries vs. Genres</h2>
+            <p><strong>Findings:</strong> The heatmap reveals that specific genres are dominant in certain countries (e.g., Anime in Japan, Bollywood in India).</p>
+            <p><strong>Business Implication:</strong> This data allows for a hyper-targeted content strategy, acquiring or producing genres that resonate with specific local audiences.</p>
+            <img src="plots/heatmap.png" alt="Heatmap of Top Countries vs. Top Genres">
+        </div>
+
+        <div class="section">
+            <h2>6. Genre Growth Trends Over Time</h2>
+            <p><strong>Findings:</strong> The line plot reveals that while all genres have grown, Dramas and Documentaries have shown significant upward trends since 2016. Documentaries, in particular, saw a notable spike around 2020, reflecting a growing user appetite for non-fiction content.</p>
+            <p><strong>Business Implication:</strong> Netflix should capitalize on this trend by increasing investment in high-quality documentary series and films to meet rising audience demand.</p>
+            <img src="plots/yearly_growth_of_selected_genres.png" alt="Yearly Growth of Selected Genres">
+        </div>
+
+        <div class="section">
+            <h2>7. Movie Duration Analysis by Genre</h2>
+            <p><strong>Findings:</strong> The box plot shows that genres like Stand-Up Comedy and Documentaries typically have a much shorter runtime compared to Dramas or International Movies.</p>
+            <p><strong>Business Implication:</strong> This presents an opportunity to curate content based on viewing time. A "Quick Watch" or "Under 90 Minutes" category featuring these shorter genres could cater effectively to users with limited time.</p>
+            <img src="plots/movie_duration_by_top_10_genres.png" alt="Movie Duration by Top 10 Genres">
+        </div>
+
+        <div class="section">
+            <h2>Strategic Recommendations</h2>
+            <p>Based on the analysis, we propose a multi-pronged strategy to reinforce Netflix's market leadership:</p>
+            <ul>
+                <li><strong>Optimize the Content Portfolio:</strong>
+                    <ul>
+                        <li><strong>Capitalize on Growth Genres:</strong> Aggressively invest in high-growth categories like <strong>Documentaries</strong> and <strong>Dramas</strong>, which show strong upward trends in user interest.</li>
+                        <li><strong>Curate by Viewing Time:</strong> Develop and promote playlists based on content duration, such as a "Quick Watch" category for shorter content like Stand-Up Comedy, to cater to diverse user schedules.</li>
+                    </ul>
+                </li>
+                <li style="margin-top: 1em;"><strong>Refine Global Strategy:</strong>
+                    <ul>
+                        <li><strong>Hyper-Targeted Regional Production:</strong> Move beyond simple localization. Use heatmap data to produce specific, high-demand genres in target countries to fill content gaps and resonate with local tastes.</li>
+                    </ul>
+                </li>
+                <li style="margin-top: 1em;"><strong>Enhance User Engagement:</strong>
+                    <ul>
+                        <li><strong>Smarter Personalization:</strong> Evolve the recommendation engine to incorporate not just genre, but also duration preferences and emerging trends, creating a more dynamic and satisfying user experience.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Conclusion</h2>
+            <p>The path forward for Netflix is clear: transitioning from a strategy of mass content acquisition to one of <strong>surgical, data-driven curation.</strong> By deeply understanding the nuances of genre trends, regional tastes, and even viewing duration, Netflix can not only retain its existing subscribers but also unlock new growth in a fiercely competitive global market. The key to future dominance lies in using these insights to deliver the right content, to the right audience, at the right time.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>Analysis completed based on the Netflix Movies and TV Shows dataset.</p>
+    </footer>
+
+</body>
+</html> 
